@@ -17,7 +17,7 @@ public class Day3 {
         List<String> onesSet = new ArrayList<String>();
         List<String> zerosSet = new ArrayList<String>();
         
-        for(int i=0; i<oxygenSet.get(0).length(); i++) {
+        for(int i=0; i<diagnosticList.get(0).length(); i++) {
             for(String binaryStr : oxygenSet) {
                 if(Character.getNumericValue(binaryStr.charAt(i)) == 1) {
                     onesSet.add(binaryStr);
@@ -33,12 +33,9 @@ public class Day3 {
                     //0s most common
                     oxygenSet.removeAll(new HashSet<String>(onesSet));
                 }
-                onesSet.clear();
-                zerosSet.clear();
             }
-        }
-
-        for(int i=0; i<co2Set.get(0).length(); i++) {
+            onesSet.clear();
+            zerosSet.clear();
             for(String binaryStr : co2Set) {
                 if(Character.getNumericValue(binaryStr.charAt(i)) == 1) {
                     onesSet.add(binaryStr);
@@ -54,9 +51,9 @@ public class Day3 {
                     //0s most common
                     co2Set.removeAll(new HashSet<String>(zerosSet));
                 }
-                onesSet.clear();
-                zerosSet.clear();
             }
+            onesSet.clear();
+            zerosSet.clear();
         }
 
         String oxygenRate = oxygenSet.get(0);
