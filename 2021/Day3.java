@@ -56,11 +56,8 @@ public class Day3 {
             zerosSet.clear();
         }
 
-        String oxygenRate = oxygenSet.get(0);
-        String co2Rate = co2Set.get(0);
-
-        Integer oxygen = Integer.parseInt(oxygenRate, 2);
-        Integer co2 = Integer.parseInt(co2Rate, 2);
+        Integer oxygen = Integer.parseInt(oxygenSet.get(0), 2);
+        Integer co2 = Integer.parseInt(co2Set.get(0), 2);
         System.out.println("Life support rating: " + (oxygen * co2));
     }
 }
