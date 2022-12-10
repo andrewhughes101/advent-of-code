@@ -6,11 +6,11 @@ import java.util.List;
 public class Day2 {
     public static void main(String[] args) throws IOException {
         List<String> commandList = Files.readAllLines(Paths.get("Day2Input.txt"));
-        Integer x = 0;
-        Integer y = 0;
-        Integer aim = 0;
+        int x = 0;
+        int y = 0;
+        int aim = 0;
         for (String command : commandList) {
-            Integer amount = Character.getNumericValue(command.charAt((command.length() - 1)));
+            int amount = Character.getNumericValue(command.charAt((command.length() - 1)));
             if (command.charAt(0) == 'f') {
                 x += amount;
                 y += (aim * amount);

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Day1 {
     private static Integer previousWindow;
-    private static Integer increases;
+    private static int increases;
 
     public static void main(String[] args) throws IOException {
         increases = 0;
@@ -16,7 +16,7 @@ public class Day1 {
             summedDepths.add(Integer.parseInt(depthList.get(i)) + Integer.parseInt(depthList.get(i + 1))
                     + Integer.parseInt(depthList.get(i + 2)));
         }
-        for (Integer currentWindow : summedDepths) {
+        for (int currentWindow : summedDepths) {
             if (previousWindow != null) {
                 if (currentWindow > previousWindow) {
                     increases++;
