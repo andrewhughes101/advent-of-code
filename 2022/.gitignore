@@ -1,0 +1,24 @@
+# (MacOS) automatically generated custom attributes for folders
+.DS_Store
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore VSCode generated files
+.settings
+.project
+.classpath
+.factorypath
+
+# Ignore eclipse class files in generated WebApps
+.class
+
+# Ignore Gradle build output directory
+build
+bin
+
+# Ignore vscode history
+.history
+
+# Ignore IntelliJ IDEA metadata folder
+.idea
