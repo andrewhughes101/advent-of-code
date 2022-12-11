@@ -1,13 +1,6 @@
-import org.gradle.internal.impldep.org.apache.commons.io.IOUtils
-import java.nio.charset.StandardCharsets
-
 class Day3 {
-    private fun getInput(): String {
-        return IOUtils.toString(Day3::class.java.classLoader.getResourceAsStream("Day3.txt"), StandardCharsets.UTF_8)
-    }
 
-    fun getDuplicateItem(): MutableList<Char> {
-        val input = getInput()
+    fun getDuplicateItem(input: String): MutableList<Char> {
         val duplicateItems = mutableListOf<Char>()
         val split = input.split("\n")
 
@@ -42,8 +35,8 @@ class Day3 {
         return duplicateItems
     }
 
-    fun calculatePriorities(): Int {
-        val items = getDuplicateItem()
+    fun calculatePriorities(input: String): Int {
+        val items = getDuplicateItem(input)
         var prioritySum = 0
         items.forEach { item ->
             val ascii = item.toInt()
